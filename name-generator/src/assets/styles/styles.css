@@ -1,0 +1,213 @@
+/* ----------------------------------------------
+   FONT IMPORTS
+---------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@500&family=Cinzel+Decorative:wght@400;700;900&family=Uncial+Antiqua&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@500&family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Unicase:wght@300;400;500;600;700&family=Uncial+Antiqua&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --bg-gold: linear-gradient(90deg, #bb4f24 0%, #ffde44 17%, #efc488 24%, #ffe752 40%, #e09326 50%, #e4962a 59%, #b0781b 70%, #efb333 85%, #873a1a 100%);
+}
+
+body {
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: cover;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://img.goodfon.com/wallpaper/big/0/15/the-rift-by-starkitecktdesigns-starkitecktdesigns-zvezdy-kos.webp');
+}
+
+/* ----------------------------------------------
+---------------------------------------------- */
+
+.decoration{ 
+    width: 300px; 
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+}
+
+.name-box {
+    width: 350px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    margin: 16px;
+    transition: 300ms ease-in-out;
+    backdrop-filter: blur(3px);
+    border: 3px solid transparent;
+    border-image: linear-gradient(90deg, #bb4f24 0%, #ffde44 17%, #efc488 24%, #ffe752 40%, #e09326 50%, #e4962a 59%, #b0781b 70%, #efb333 85%, #873a1a 100%) 1;
+}
+
+#generate {
+    width: 200px;
+    height: 50px;
+}
+
+.panel{ 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    padding: 20px; 
+ }
+
+
+#name {
+    width: 100%;
+    font-size: 40px;
+    font-family: "Cinzel Decorative", serif;
+    font-weight: 700;
+    background: -webkit-linear-gradient(#fff3d5, rgb(203, 120, 37));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: "Cinzel Decorative", serif;
+    font-weight: 700;
+    background: -webkit-linear-gradient(#fff3d5, rgb(203, 120, 37));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ----------------------------------------------
+   ANIMATIONS
+---------------------------------------------- */
+
+.float {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes gold-glow {
+    0% {
+        box-shadow: 0 0 5px #f8e258;
+    }
+    50% {
+        box-shadow: 0 0 15px #f8e258, 0 0 25px #f8e258;
+    }
+    100% {
+        box-shadow: 0 0 5px #f8e258;
+    }
+}
+
+/* ----------------------------------------------
+   GOLD BUTTON
+---------------------------------------------- */
+.gold-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    transition: 500ms ease;
+    width: 170px;
+    z-index: 1;
+    text-transform: uppercase;
+    background: var(--bg-gold);
+    box-sizing: border-box;
+    margin: 10px;
+}
+
+.gold-btn span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    background: var(--bg-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "Cinzel Decorative", serif;
+    font-weight: 700;
+}
+
+.gold-btn::before {
+    position: absolute;
+    content: '';
+    inset: 3px;
+    border-radius: 10px;
+    background: #000;
+    z-index: -1;
+}
+
+.gold-btn:hover {
+    transform: scale(1.1);
+}
+
+.gold-btn:active, .gold-btn:focus {
+    animation-name: gold-glow;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+
+/* ----------------------------------------------
+   TABLE STYLES
+---------------------------------------------- */
+.table-title {
+    text-align: center;
+    background-color: black;
+    font-weight: bold;
+    color: rgb(232, 94, 94);
+    font-family: "Cinzel Decorative", serif;
+    font-weight: 700;
+    padding: 10px;
+}
+
+.gold-table {
+    background-image: linear-gradient(90deg, #bb4f24 0%, #ffde44 17%, #efc488 24%, #ffe752 40%, #e09326 50%, #e4962a 59%, #b0781b 70%, #efb333 85%, #873a1a 100%);
+    background-origin: border-box;
+    border-spacing: 1px;
+    border: 1px solid transparent;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    font-weight: 300;
+    width: 350px;
+}
+
+.gold-table td {
+    padding: 10px;
+    border: 1px solid transparent;
+    color: rgb(215, 185, 134);
+    background-color: black;
+}
+
+.gold-table td span {
+    transition: ease-in-out 300ms;
+    font-size: 12px;
+}
+
+.gold-table td span:hover {
+    text-shadow: #FC0 1px 0 10px;
+    cursor: pointer;
+}
